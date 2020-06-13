@@ -1,0 +1,11 @@
+<section class="container">
+    <h1 class="text-center">Mina Hus</h1>
+    <div class="well">
+        <div class="panel panel-default">
+            <div class="panel-body" ng-repeat="listing in listings">
+              <h3>{{ listing.title }}</h3>
+              <a href="/house/{{listing.slug}}" class="btn btn-default">Besök Hus</a>
+            </div>
+          </div>
+    </div>
+</section>

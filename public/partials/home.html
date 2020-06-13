@@ -1,0 +1,33 @@
+<section class="container-fluid" id="home">
+  <div class="search-area">
+    <h2>Hitta ditt nya hus</h2>
+    <h3>Vi hjälper dig att finna ditt ställe som du kommer kalla ditt hem.</h3>
+    <form class="form-inline" ng-submit="search()">
+      <div class="center">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control input-lg" placeholder="Sök..." ng-model="searchTerm">
+                <div class="input-group-addon">
+                  <button type="button" ng-click="getLocation()"><i class="fa fa-location-arrow"></i></button>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Hitta</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="overlay"></div>
+</section>
+
+<!-- Why we are building this platform -->
+
+<section class="container space-around" id="featured">
+  <div class="tagline text-center">
+    <h3>Varför använda Hemgage?</h3>
+    <hr class="line">
+  </div>
+</section>
