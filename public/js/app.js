@@ -59,7 +59,7 @@ angular.module('Hemgage', ['ngRoute', 'satellizer', 'ngFileUpload', 'ui.bootstra
     $authProvider.facebook({
       url: '/auth/facebook',
       clientId: '272017467492507',
-      redirectUri: 'https://00bb230af6e0.ngrok.io/auth/facebook/callback'
+      redirectUri: 'https://acf729decb20.ngrok.io/auth/facebook/callback'
     });
 
     function skipIfAuthenticated($location, $auth) {

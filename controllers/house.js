@@ -21,7 +21,6 @@ exports.getHouses = function (req, res, next) {
 
 
 exports.createHouse = function (req, res, next) {
-    console.log('creating house');
     geoCode.geocode({ address: req.body.address, zipcode: req.body.postcode }, function (err, response) {
         if (!response[0]) {
             console.log('wrong addresss');
@@ -38,21 +37,21 @@ exports.createHouse = function (req, res, next) {
                 phone_number: req.body.number
             };
 
+
             const houseDetails = {
                 location,
                 contact,
                 creator: req.user._id,
                 title: req.body.title,
-                slug: getSlug(req.body.title)
+                slug: getSlug(req.body.title),
+                city: response[0].city
             };
             House.create(houseDetails, function (err, house) {
                 if (err) {
-                    console.log(err);
                     res.status(400).json({
                         success: false,
                         message: "Could not create a listing."
                     });
-                    console.log('error');
                 }
 
                 res.status(200).send(house);
@@ -95,6 +94,5 @@ exports.searchDirectory = function (req, res, next) {
         .exec(function (err, listing) {
             res.send(listing);
         });
-
-
 };
+

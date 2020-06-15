@@ -1,4 +1,3 @@
-var getSlug = require('speakingurl');
 var mongoose = require('mongoose');
 
 
@@ -8,14 +7,17 @@ var houseSchema = new mongoose.Schema({
   contact: Object,
   location: Object,
   image: String,
+  city: { type: String },
   description: String,
-  creator: String
+  creator: String,
+  image: {
+    type: String,
+    default: 'https://placehold.it/500'
+  }
 });
 
-houseSchema.index({name: 'text', 'title': 'text'});
-
-
-
+// houseSchema.index({ title: 'text', city: 'text' });
+houseSchema.index({'$**': 'text'});
 var Houses = mongoose.model('Houses', houseSchema);
 
 module.exports = Houses;

@@ -22,6 +22,7 @@ var User = require('./models/User');
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 var houseController = require('./controllers/house');
+var generalController = require('./controllers/general');
 
 var app = express();
 
@@ -82,6 +83,10 @@ app.post('/api/houses', userController.ensureAuthenticated, houseController.crea
 app.get('/api/houses/:owner', userController.ensureAuthenticated, houseController.getOwnHouse);
 app.get('/api/houses/listing/:owner', userController.ensureAuthenticated, houseController.getOwnListings);
 app.get('/api/houses/directory/:search', houseController.searchDirectory);
+
+// Misc Controller
+app.get('/lookup/:latitude/:longitude', generalController.getLocation)// API for looking up addresses
+
 
 app.get('*', function(req, res) {
   res.redirect('/#' + req.originalUrl);
