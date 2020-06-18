@@ -6,7 +6,7 @@ angular.module('Hemgage')
           $auth.setToken(response);
           $rootScope.currentUser = response.data.user;
           $window.localStorage.user = JSON.stringify(response.data.user);
-          $location.path('/account');
+          $location.path('/new-house');
         })
         .catch(function(response) {
           $scope.messages = {
@@ -20,7 +20,7 @@ angular.module('Hemgage')
         .then(function(response) {
           $rootScope.currentUser = response.data.user;
           $window.localStorage.user = JSON.stringify(response.data.user);
-          $location.path('/account');
+          $location.path('/new-house');
         })
         .catch(function(response) {
           if (response.error) {

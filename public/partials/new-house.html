@@ -37,6 +37,196 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <p class="lead">Info</p>
+                        <article class="col-md-10 position-right">
+                            <div class="col-md-3 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Hustyp</span>
+                                    <select class="form-control" ng-model="house.type" required>
+                                        <option value="villa">Villa</option>
+                                        <option value="sommarstuga">Sommarstuga </option>
+                                        <option value="Suterräng">Suterräng</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Antal Rum</span>
+                                    <select class="form-control" ng-model="house.numofrooms" required>
+                                        <option ng-repeat="rooms in numrooms track by $index">{{rooms}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Boarea</span>
+                                    <select class="form-control" ng-model="house.boarea" required>
+                                        <option value="{{bo}}" ng-repeat="bo in boarea track by $index">{{bo}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="col-md-2 margin-right">
+                            <div class="form-group">
+                                <span class="label label-default">Tomtarea</span>
+                                <div class="input-group">
+                                    <input type="number" id="" class="form-control" ng-model="house.tomtarea" required>
+                                    <span class="input-group-addon">m<sup>2</sup></span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="col-md-2 margin-right">
+                            <div class="form-group">
+                                <span class="label label-default">Byggår</span>
+                                <select class="form-control" ng-model="house.year" required>
+                                    <option value="{{year}}" ng-repeat="year in years track by $index">{{ year }}
+                                    </option>
+                                </select>
+                            </div>
+                        </article>
+                        <article class="col-md-2">
+                            <div class="form-group">
+                                <span class="label label-default">Våningar</span>
+                                <select class="form-control" ng-model="house.floors" required>
+                                    <option value="{{floor}}" ng-repeat="floor in floors track by $index">{{ floor }}
+                                    </option>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <article class="col-md-5">
+                            <div class="form-group">
+                                <span class="label label-default">Renoveringar</span>
+                                <textarea class="form-control" maxlength="250" ng-model="house.renovations" required
+                                    placeholder="Har det sket några renoveringar?"></textarea>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <p class="lead">Driftinformation</p>
+                    </div>
+                    <section class="col-md-12 position-right">
+                        <div class="row">
+                            <div class="col-md-2 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Elektricitet</span>
+                                    <select class="form-control" ng-model="house.electricty" required>
+                                        <option value="solceller">Solceller</option>
+                                        <option value="elnät">Elnät </option>
+                                        <option value="egenförsörjande">Egenförsörjande</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Internet</span>
+                                    <select class="form-control" ng-model="house.internet" required>
+                                        <option value="fiber">Fiber</option>
+                                        <option value="telenät">Telenät</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Vatten</span>
+                                    <select class="form-control" ng-model="house.vatten" required>
+                                        <option value="kommunal">Kommunal</option>
+                                        <option value="egen-brunn">Egen brunn</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 margin-right">
+                                <div class="form-group">
+                                    <span class="label label-default">Uppvärmning</span>
+                                    <select class="form-control" ng-model="house.varme" required>
+                                        <option value="fjärrvärme">Fjärrvärme</option>
+                                        <option value="bergvärme">Bergvärme </option>
+                                        <option value="elektricitet">Elektricitet</option>
+                                        <option value="luft-vatten">Luft-vatten</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> <!-- Row -->
+                    </section>
+                    <section class="col-md-12">
+                        <div class="row">
+                            <p class="lead">Huset Har</p>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="house.garage"> Garage
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="house.veranda"> Veranda
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="house.balkong"> Balkong
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="house.uteplats"> Uteplats
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="house.greenhouse"> Växthus
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="house.pool"> Pool
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-md-12">
+                        <div class="row">
+                            <p class="lead">Bilder</p>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default" ngf-select="uploadFiles($files)" ngf-multiple="true" required ngf-model-invalid="errorFile"
+                                accept="image/*" ngf-max-height="10000" ngf-max-size="4MB" ng-model="house.images">Välj bilder</button>
+                        </div>
+                        <ul class="image-preview">
+                            <li class="image" ng-repeat="image in house.images">
+                                <img ngf-thumbnail="image">
+                            </li>
+                        </ul>
+                    </section>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Create House Listing</button>
                     </div>

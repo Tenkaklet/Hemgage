@@ -1,13 +1,15 @@
 ul.image-preview {
-    height: 200px;
+    min-height: 200px;
     .image {
         height: auto;
         display: inline-block;
         margin-right: 5%;
         position: relative;
+        margin-bottom: 2%;
         img {
-            width: 200px;
-            height: 200px;
+            width: 175px;
+            height: 175px;
+            border-radius: 4px;
         }
     }
 }

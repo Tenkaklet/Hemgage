@@ -5828,6 +5828,16 @@ button.close {
 .margin-down {
   margin-bottom: 20px; }
 
+.margin-left {
+  margin-left: 5%; }
+
+.margin-right {
+  margin-right: 2%; }
+
+.position-right {
+  position: relative;
+  right: 10px; }
+
 .container-fluid {
   padding: 0px; }
 
@@ -5898,15 +5908,17 @@ button.close {
   color: #FFF; }
 
 ul.image-preview {
-  height: 200px; }
+  min-height: 200px; }
   ul.image-preview .image {
     height: auto;
     display: inline-block;
     margin-right: 5%;
-    position: relative; }
+    position: relative;
+    margin-bottom: 2%; }
     ul.image-preview .image img {
-      width: 200px;
-      height: 200px; }
+      width: 175px;
+      height: 175px;
+      border-radius: 4px; }
 
 .remove-overlay {
   opacity: 0;

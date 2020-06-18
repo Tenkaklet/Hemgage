@@ -126,6 +126,7 @@ exports.accountPut = function (req, res, next) {
     return res.status(400).send(errors);
   }
 
+console.log(req);
 
 
 
