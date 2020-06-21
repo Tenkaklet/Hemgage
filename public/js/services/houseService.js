@@ -15,6 +15,6 @@ angular.module('Hemgage')
       },
       searchDirectory: function (searchTerm) {
         return $http.get('/api/houses/directory/' + searchTerm);
-      }
+      },
     };
   });

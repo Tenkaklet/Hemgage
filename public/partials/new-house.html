@@ -10,7 +10,7 @@
                     house...</p>
             </div>
             <div class="house-info">
-                <form class="form-horizontal" ng-submit="newHouse(house)">
+                <form class="form-horizontal" ng-submit="newHouse(house)" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-8">
                             <div class="form-group">
@@ -21,10 +21,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <p class="lead">Address</p>
+                        <p class="lead">Address &amp; Telefonnummer</p>
                         <div class="form-group">
                             <div class="col-md-4">
-                                <input type="text" class="form-control" ng-model="house.address" placeholder="Address"
+                                <input type="text" class="form-control" ng-model="house.number" placeholder="Telefonummer">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" ng-model="house.address" placeholder="Gata"
                                     required>
                             </div>
                             <div class="col-md-4">
@@ -218,8 +223,9 @@
                             <p class="lead">Bilder</p>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-default" ngf-select="uploadFiles($files)" ngf-multiple="true" required ngf-model-invalid="errorFile"
-                                accept="image/*" ngf-max-height="10000" ngf-max-size="4MB" ng-model="house.images">Välj bilder</button>
+                            <!-- <button class="btn btn-default" ngf-select="uploadFiles($files)" ngf-multiple="true" required ngf-model-invalid="errorFile"
+                                accept="image/*" ngf-max-height="10000" ngf-max-size="4MB" ng-model="house.images">Välj bilder</button> -->
+                                <input type="file" class="form-control" name="houseImages" ngf-select="uploadFiles($files)" ngf-multiple="true" required ngf-model-invalid="errorFile" accept="image/*" ngf-max-height="10000" ngf-max-size="4MB" ng-model="house.images">
                         </div>
                         <ul class="image-preview">
                             <li class="image" ng-repeat="image in house.images">

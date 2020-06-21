@@ -11,6 +11,8 @@ var jwt = require('jsonwebtoken');
 var moment = require('moment');
 var request = require('request');
 var sass = require('node-sass-middleware');
+const formidable = require('express-formidable');
+
 
 // Load environment variables from .env file
 dotenv.load();
@@ -25,6 +27,8 @@ var houseController = require('./controllers/house');
 var generalController = require('./controllers/general');
 
 var app = express();
+
+app.use(formidable());
 
 
 mongoose.connect(process.env.MONGODB, { useMongoClient: true }, () => {
