@@ -7,7 +7,8 @@ angular.module('Hemgage')
                 const longitude = pos.coords.longitude;
                 General.getLocation(latitude, longitude)
                 .then(function (location) {
-                    $scope.searchTerm = location.data.results[0].address_components[2].long_name + ',' + location.data.results[11].formatted_address;
+                    console.log(location.data);
+                    $scope.searchTerm = location.data.results[0].address_components[2].long_name + ',' + location.data.results[0].address_components[4].long_name;
                 });
             });
         };
