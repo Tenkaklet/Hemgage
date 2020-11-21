@@ -5942,6 +5942,19 @@ ul.image-preview {
   background-image: url("https://placehold.it/1080");
   background-size: cover; }
 
+#directory .link .thumbnail {
+  transition: 0.2s all ease-in-out;
+  box-shadow: 2px 0px 4px transparent;
+  padding: 0;
+  border-radius: 1px;
+  margin-right: 2%; }
+  #directory .link .thumbnail .title {
+    margin: 0; }
+    #directory .link .thumbnail .title span {
+      font-size: 14px; }
+  #directory .link .thumbnail:hover {
+    box-shadow: 2px 1px 6px #999; }
+
 html {
   position: relative;
   min-height: 100%; }

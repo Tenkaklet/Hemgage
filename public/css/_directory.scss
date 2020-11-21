@@ -1,0 +1,22 @@
+
+#directory {
+    .link {        
+        .thumbnail {
+            transition: 0.2s all ease-in-out;
+            box-shadow: 2px 0px 4px transparent;
+            padding: 0;
+            border-radius: 1px;
+            margin-right: 2%;
+    
+            .title {
+                margin: 0;
+                span {
+                    font-size: 14px;
+                }
+            }
+            &:hover {
+                box-shadow: 2px 1px 6px #999;
+            }
+        }        
+    }
+}

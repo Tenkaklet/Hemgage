@@ -1,13 +1,35 @@
-<div class="container">
+<div class="container" id="directory">
   <div class="row">
     <section class="col-md-4">
       <h3>Du sökte: {{ searched }}</h3>
       <p class="lead">Gav {{ search.length }} resultat</p>
     </section>
-    <section class="col-md-8">
-      <div class="row">
-        
-      </div>
+  </div>
+  <div class="row">
+    <section class="col-md-12 col-lg-8">
+      <a ng-href="/house/{{ house.slug }}" class="link" ng-repeat="house in search">
+        <article class="thumbnail col-md-5 col-sm-5">
+          <img ng-src="{{ house.image }}" alt="{{ house.title }}">
+          <div class="caption">
+            <p class="lead title">{{ house.title }} <span><small>{{ house.city }}</small></span></p>
+            <small class="help-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, iure?</small>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <p>Bo Area: <small>{{ house.boarea }}</small></p>
+              </li>
+              <li class="list-group-item">
+                <p>Tomt Area: <small>{{ house.tomtarea }} m<sup>2</sup></small></p>
+              </li>
+              <li class="list-group-item">
+                <p>{{ house.rooms }} Rum</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </a>
+    </section>
+    <section class="col-md-4">
+      <p class="lead">Map</p>
     </section>
   </div>
 </div>
