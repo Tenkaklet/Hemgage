@@ -66,35 +66,35 @@ exports.createHouse = function (req, res) {
             // }
 
 
-            // cloudinary.uploader.upload('http://localhost:3000/64ca3437-a1f9-4b82-a029-e0e4c7e53743', function(err, result) {
-            //     console.log('error', err);
-                
-                
-            //     gallery.push(result.secure_url);
-            //     const houseDetails = {
-            //         location,
-            //         contact,
-            //         creator: req.user._id,
-            //         title: req.body.title,
-            //         slug: getSlug(req.body.title),
-            //         city: response[0].city,
-            //         renovations: req.body.renovations,
-            //         balkong: req.body.balkong,
-            //         boarea: req.body.boarea,
-            //         electricity: req.body.electricity,
-            //         floors: req.body.floors,
-            //         internet: req.body.internet,
-            //         rooms: req.body.numofrooms,
-            //         pool: req.body.pool,
-            //         tomtarea: req.body.tomtarea,
-            //         type: req.body.type,
-            //         heat: req.body.varme,
-            //         water: req.body.vatten,
-            //         year: req.body.year,
-            //         photoGallery: gallery
-            //     };
-            //     res.send(houseDetails);
-            // });
+                // cloudinary.uploader.upload('http://localhost:3000/64ca3437-a1f9-4b82-a029-e0e4c7e53743', function(err, result) {
+                //     console.log('error', err);
+                    
+                    
+                //     gallery.push(result.secure_url);
+                //     const houseDetails = {
+                //         location,
+                //         contact,
+                //         creator: req.user._id,
+                //         title: req.body.title,
+                //         slug: getSlug(req.body.title),
+                //         city: response[0].city,
+                //         renovations: req.body.renovations,
+                //         balkong: req.body.balkong,
+                //         boarea: req.body.boarea,
+                //         electricity: req.body.electricity,
+                //         floors: req.body.floors,
+                //         internet: req.body.internet,
+                //         rooms: req.body.numofrooms,
+                //         pool: req.body.pool,
+                //         tomtarea: req.body.tomtarea,
+                //         type: req.body.type,
+                //         heat: req.body.varme,
+                //         water: req.body.vatten,
+                //         year: req.body.year,
+                //         photoGallery: gallery
+                //     };
+                //     res.send(houseDetails);
+                // });
             
             form.on('file', function (field, files) {
                 console.log(files.path);
@@ -113,8 +113,8 @@ exports.createHouse = function (req, res) {
                 console.log('ALL DONE');
             });
 
-            // parse the incoming request containing the form data
-            form.parse(req);
+                // parse the incoming request containing the form data
+                form.parse(req);
 
 
 
